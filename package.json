@@ -17,9 +17,8 @@
   },
   "homepage": "https://github.com/viyanateaa/afi-adsystem#readme",
   "devDependencies": {
-    "babel-cli": "^6.26.0",
-    "babel-preset-es2015": "^6.24.1",
-    "rimraf": "^2.6.2"
+    "babel-preset-env": "^1.6.1",
+    "babel-register": "^6.26.0"
   },
   "dependencies": {
     "mysql": "^2.15.0",

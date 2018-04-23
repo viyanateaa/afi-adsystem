@@ -18,3 +18,12 @@ CREATE TABLE IF NOT EXISTS ads (
   PRIMARY KEY (ad_id),
   FOREIGN KEY (ad_advertiserID) REFERENCES advertisers(adv_id)
 ) ENGINE=InnoDB;
+
+
+INSERT INTO advertisers (adv_userID,adv_identifier) VALUES
+(1,0),
+(2,1);
+
+INSERT INTO ads(ad_advertiserPrice,ad_productPrice,ad_content,ad_title,ad_advertiserID) VALUES
+(0,100,'mug','mug AD',1),
+(40,100,'mug','mug AD',2);
