@@ -1,0 +1,5 @@
+mutation {
+  createAds(input: {ad_advertiserPrice: 40, ad_productPrice:100, ad_content: "something", ad_title: "ads", ad_advertiserID: "f44f2940-aae4-15e6-9u5f-wf389f279131"}) {
+    ad_advertiserPrice
+  }
+}

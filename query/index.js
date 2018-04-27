@@ -1,19 +1,11 @@
-import {GraphQLObjectType, GraphQLString, GraphQLList} from 'graphql';
-import {Advertisers,Ads} from './types';
-import {selectAll} from '../db'
-const Query = new GraphQLObjectType({
-  name: 'RootQueryType',
-  fields: {
-    Advertisers: {
-      type: new GraphQLList(Advertisers),
-      resolve: () => selectAll('advertisers')
-  },
-    Ads: {
-        type: new GraphQLList (Ads),
-        resolve: () => selectAll('ads')
-        }
-    }
+import { GraphQLSchema } from 'graphql';
+
+import Query from './query';
+import Mutation from './mutation';
+
+const schema = new GraphQLSchema({
+  query: Query,
+  mutation: Mutation
 });
 
-
-export default Query;
+export default schema;

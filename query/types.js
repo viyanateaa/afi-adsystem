@@ -10,7 +10,7 @@ const {
 export const Advertisers = new GraphQLObjectType({
     name: 'Advertisers',
     fields: {
-        id: { type: GraphQLInt },
+        id: { type: GraphQLString},
         userID: { type: GraphQLInt },
         identifier: { type: GraphQLInt }
     }
@@ -19,10 +19,11 @@ export const Advertisers = new GraphQLObjectType({
 export const Ads = new GraphQLObjectType({
     name: 'Ads',
     fields:{
-        ad_id: { type: GraphQLInt },
+        ad_id: { type: GraphQLString },
         ad_advertiserPrice: { type: GraphQLInt },
+        ad_productPrice: { type: GraphQLInt },
         ad_content: { type: GraphQLString },
         ad_title:{ type: GraphQLString },
-        ad_advertiserID:{ type: GraphQLInt},
+        ad_advertiserID:{ type: GraphQLString},///
         }
 });
